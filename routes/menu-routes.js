@@ -3,7 +3,7 @@ const {
   createMenuItem,
   getAllMenuItems,
   getMenuItem,
-  // getMenuItemOfTheDay,
+  getMenuOfTheDay,
   updateMenuItem,
   deleteMenuItem,
 } = require("../controllers/menu-controller");
@@ -11,7 +11,7 @@ const {
 const menuRoutes = Router();
 
 menuRoutes.get("/", getAllMenuItems);
-// menuRoutes.get("/oftheday", getMenuItemOfTheDay);
+menuRoutes.get("/oftheday", getMenuOfTheDay);
 menuRoutes.get("/:id", getMenuItem);
 
 menuRoutes.post("/", createMenuItem);
